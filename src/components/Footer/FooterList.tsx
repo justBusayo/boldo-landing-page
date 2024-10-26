@@ -8,7 +8,7 @@ const FooterList: React.FC<FooterListProps> = ({ heading, list }) => {
     <div className="flex flex-col gap-6 md:gap-12">
       <h4 className="flex gap-2 text-xl text-[#000000] font-bold">{heading}</h4>
       {list.map((ls) => (
-        <div className="flex items-center gap-2 text-base text-[#777777] font-normal">
+        <div key={ls} className="flex items-center gap-2 text-base text-[#777777] font-normal">
           <span>{ls.split("*")[0]}</span>
           {ls.includes("*") && (
             <div

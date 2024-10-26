@@ -60,6 +60,7 @@ export default function Home() {
     <div className="w-full">
       {/* ========HEADER =========== */}
       <Headers />
+      {/* ======== HERO ========= */}
       <section className="relative w-full md:h-[100vh] bg-[#0A2640] flex flex-col gap-5 justify-center px-4 md:px-[104px] 2xl:px-[180px] pb-12 md:pb-0 pt-28">
         <Image
           style={{
@@ -144,7 +145,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ====== START NOW ======== */}
+      {/* ====== WE CONNECT LIST ======== */}
       <section className="w-full md:h-[100vh] flex flex-col md:flex-row md:items-center md:justify-between gap-5 px-4 md:px-[104px] 2xl:px-[180px] py-[50px] md:py-[120px]">
         <ImagesWithFloatCard />
         <div className="flex flex-col gap-10 mt-[190px] md:mt-0">
@@ -168,8 +169,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ======= CONNECT ===== */}
-      <section className="w-full md:h-[100vh] flex flex-col md:flex-row md:items-center md:justify-between gap-5 px-4 md:px-[104px] 2xl:px-[180px] pt-[50px] pb-[150px] md:pb-[120px]">
+      {/* ======= MORE CONNECT ===== */}
+      <section className="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-5 px-4 md:px-[104px] 2xl:px-[180px] pt-[50px] pb-[150px] md:pb-[120px] md:mb-9">
         <div className="flex flex-col gap-10">
           <p className="max-w-[493px] text-4xl text-[#000000] md:leading-[56px] manrope font-normal">
             We connect our customers with the best, and help them keep up-and
@@ -198,7 +199,7 @@ export default function Home() {
         <ImagesWithFloatCard2 />
       </section>
 
-      {/* ====== ENTERPRISE ===== */}
+      {/* ====== TESTIMONIAL ===== */}
       <section className="w-full md:h-[100vh] bg-[#0A2640] flex flex-col gap-10 justify-center px-4 md:px-[104px] 2xl:px-[180px] py-[100px] md:py-[120px]">
         <p className="max-w-[530px] text-4xl text-white md:leading-[56px] manrope font-normal">
           An enterprise template to ramp up your company website
@@ -227,7 +228,7 @@ export default function Home() {
       </section>
 
       {/* =======CUSTOMER CONNECT ====== */}
-      <section className="w-full md:h-[100vh] flex flex-col gap-10 justify-center px-4 md:px-[104px] 2xl:px-[180px] py-[100px] md:py-[120px]">
+      <section className="w-full flex flex-col gap-10 justify-center px-4 md:px-[104px] 2xl:px-[180px] pt-[100px] pb-[50px]">
         <Image src={LgTableTalk} alt="" className="w-full" />
         <div className="w-full flex flex-col md:flex-row gap-7">
           <p className="max-w-[493px] text-4xl text-[#000000] md:leading-[56px] manrope font-normal">
