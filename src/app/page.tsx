@@ -61,7 +61,7 @@ export default function Home() {
       {/* ========HEADER =========== */}
       <Headers />
       {/* ======== HERO ========= */}
-      <section className="relative w-full md:h-[100vh] bg-[#0A2640] flex flex-col gap-5 justify-center px-4 md:px-[104px] 2xl:px-[180px] pb-12 md:pb-0 pt-28">
+      <section className="relative w-full lg:h-[100vh] bg-[#0A2640] flex flex-col gap-5 justify-center px-4 md:px-[104px] 2xl:px-[180px] pb-12 lg:pb-0 pt-28">
         <Image
           style={{
             mixBlendMode: "luminosity",
@@ -70,7 +70,7 @@ export default function Home() {
           alt=""
           className="absolute top-0 right-0"
         />
-        <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-12 z-10 mt-10 md:mt-0">
+        <div className="w-full flex flex-col lg:flex-row items-center lg:justify-between gap-12 z-10 mt-10 md:mt-0">
           <div className="w-full md:w-[567px] flex flex-col gap-7 md:gap-5">
             <h5 className="max-w-[545px] text-4xl md:text-[48px] text-white md:leading-[72px] font-normal text-left manrope">
               Save time by building fast with Boldo Template{" "}
@@ -98,7 +98,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <Image src={HeroImage} alt="Hero image" />
+          <Image src={HeroImage} alt="Hero image" className="w-full lg:w-auto" />
         </div>
 
         <div
@@ -280,7 +280,7 @@ export default function Home() {
 
       {/* ======== START NOW ============== */}
       <section className="w-full md:h-[70vh] flex items-center justify-center px-4 md:px-[104px] 2xl:px-[180px] py-[100px] md:py-[120px]">
-        <div className="relative w-full xl:w-[1200px] py-24 bg-[#0A2640] rounded-2xl">
+        <div className="relative w-full xl:w-[1200px] px-5 py-24 bg-[#0A2640] rounded-2xl">
           <Image
             style={{
               mixBlendMode: "luminosity",
