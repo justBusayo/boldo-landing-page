@@ -16,10 +16,12 @@ import ImagesWithFloatCard2 from "@/components/ImagesWithFloatCard/ImagesWithFlo
 import TestimonialCard from "@/components/TestimonialCard";
 import Dumbledore from "../../public/dumbledore.svg";
 import Snape from "../../public/snape.svg";
+import BGImage from "../../public/section-bg-img.svg";
 import Potter from "../../public/potter.svg";
 import LgTableTalk from "../../public/large-table-talk.svg";
 import CollapsibleTab from "@/components/CollapsibleTab";
 import BlogCard from "@/components/BlogCard";
+import InputField from "@/components/InputField";
 export default function Home() {
   const blogLists = [
     {
@@ -54,9 +56,17 @@ export default function Home() {
   ];
   return (
     <div className="w-full">
-      <section className="w-full h-[100vh] bg-[#0A2640] flex flex-col gap-5 justify-center px-4 md:px-[104px] 2xl:px-[180px]">
-        <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-8">
-          <div className="w-full md:w-[567px] flex flex-col gap-3 md:gap-5">
+      <section className="relative w-full h-[100vh] bg-[#0A2640] flex flex-col gap-5 justify-center px-4 md:px-[104px] 2xl:px-[180px]">
+        <Image
+          style={{
+            mixBlendMode: "luminosity",
+          }}
+          src={BGImage}
+          alt=""
+          className="absolute top-0 right-0"
+        />
+        <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-12 z-10 mt-10 md:mt-0">
+          <div className="w-full md:w-[567px] flex flex-col gap-7 md:gap-5">
             <h5 className="max-w-[545px] text-4xl md:text-[48px] text-white md:leading-[72px] font-normal text-left manrope">
               Save time by building fast with Boldo Template{" "}
             </h5>
@@ -72,7 +82,7 @@ export default function Home() {
                 onClick={() => {
                   console.log("test");
                 }}
-                className="w-[247px] bg-[#69E6A6] text-#0A2640"
+                className="w-[247px] bg-[#69E6A6] text-[#0A2640]"
               />
               <Button
                 label="Buy Template"
@@ -102,7 +112,7 @@ export default function Home() {
       </section>
 
       {/* ===== OUR SERVICES ===== */}
-      <section className="w-full md:h-[100vh] flex flex-col gap-5 justify-center px-4 md:px-[104px] 2xl:px-[180px] py-[100px] md:py-[120px]">
+      <section className="w-full md:h-[100vh] flex flex-col gap-5 justify-center px-4 md:px-[104px] 2xl:px-[180px] py-[50px] md:py-[120px]">
         <SectionHeader
           title="Our Services"
           description="Handshake infographic mass market crowdfunding iteration."
@@ -131,7 +141,7 @@ export default function Home() {
       </section>
 
       {/* ====== START NOW ======== */}
-      <section className="w-full md:h-[100vh] flex flex-col md:flex-row md:items-center md:justify-between gap-5 px-4 md:px-[104px] 2xl:px-[180px] py-[100px] md:py-[120px]">
+      <section className="w-full md:h-[100vh] flex flex-col md:flex-row md:items-center md:justify-between gap-5 px-4 md:px-[104px] 2xl:px-[180px] py-[50px] md:py-[120px]">
         <ImagesWithFloatCard />
         <div className="flex flex-col gap-10 mt-[190px] md:mt-0">
           <p className="max-w-[493px] text-4xl text-[#000000] md:leading-[56px] manrope font-normal">
@@ -155,7 +165,7 @@ export default function Home() {
       </section>
 
       {/* ======= CONNECT ===== */}
-      <section className="w-full md:h-[100vh] flex flex-col md:flex-row md:items-center md:justify-between gap-5 px-4 md:px-[104px] 2xl:px-[180px] py-[100px] md:py-[120px] pb-[150px]">
+      <section className="w-full md:h-[100vh] flex flex-col md:flex-row md:items-center md:justify-between gap-5 px-4 md:px-[104px] 2xl:px-[180px] pt-[50px] pb-[150px] md:pb-[120px]">
         <div className="flex flex-col gap-10">
           <p className="max-w-[493px] text-4xl text-[#000000] md:leading-[56px] manrope font-normal">
             We connect our customers with the best, and help them keep up-and
@@ -234,14 +244,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========= VALUE PROPOSITION ============ */}
-      <section className="w-full md:h-[100vh] flex flex-col gap-5 justify-center px-4 md:px-[104px] 2xl:px-[180px] py-[100px] md:py-[120px]">
+      {/* ========= BLOG SECTION ============ */}
+      <section className="w-full md:h-[100vh] flex flex-col gap-5 justify-center px-4 md:px-[104px] 2xl:px-[180px] py-[50px] md:py-[120px]">
         <SectionHeader
           title="Our Blog"
           description="Value proposition accelerator product management venture"
         />
 
-        <div className="w-full grid grid-cols-1 md:grid-cols-3 items-center justify-between gap-7">
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 items-center justify-between gap-5">
           {blogLists.map((blog) => (
             <div key={blog.id}>
               <BlogCard
@@ -261,6 +271,36 @@ export default function Home() {
           onClick={() => {}}
           className="w-[219px] h-[60px] mx-auto text-[#0A2640] border border-[#0A2640]"
         />
+      </section>
+
+      {/* ======== START NOW ============== */}
+      <section className="w-full md:h-[70vh] flex items-center justify-center px-4 md:px-[104px] 2xl:px-[180px] py-[100px] md:py-[120px]">
+        <div className="relative w-full xl:w-[1200px] py-24 bg-[#0A2640] rounded-2xl">
+          <Image
+            style={{
+              mixBlendMode: "luminosity",
+            }}
+            src={BGImage}
+            alt=""
+            className="absolute top-0 right-0 z-10 rounded-2xl"
+          />
+
+          <div className="sticky w-full h-full flex flex-col items-center gap-6 z-20">
+            <p className="max-w-[530px] text-4xl text-white  text-center md:leading-[56px] manrope font-normal">
+              An enterprise template to ramp up your company website
+            </p>
+            <div className="flex flex-col md:flex-row items-center gap-5">
+              <InputField onChange={() => {}} />
+              <Button
+                label="Start now"
+                onClick={() => {
+                  console.log("test");
+                }}
+                className="w-[247px] bg-[#69E6A6] text-[#0A2640]"
+              />
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
