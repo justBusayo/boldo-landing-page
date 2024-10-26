@@ -19,7 +19,39 @@ import Snape from "../../public/snape.svg";
 import Potter from "../../public/potter.svg";
 import LgTableTalk from "../../public/large-table-talk.svg";
 import CollapsibleTab from "@/components/CollapsibleTab";
+import BlogCard from "@/components/BlogCard";
 export default function Home() {
+  const blogLists = [
+    {
+      id: 1,
+      avatar: Dumbledore,
+      image: CoolFeat,
+      date: "November 22, 2021",
+      category: "Category",
+      writer: "Chandler Bing",
+      description: "Pitch termsheet backing validation focus release.",
+    },
+    {
+      id: 2,
+      avatar: Snape,
+      image: CoolerFeat,
+      date: "November 22, 2021",
+      category: "Category",
+      writer: "Rachel Green",
+      description:
+        "Seed round direct mailing non-disclosure agreement graphical user interface rockstar.",
+    },
+    {
+      id: 3,
+      avatar: Potter,
+      image: CoolestFeat,
+      date: "November 22, 2021",
+      category: "Category",
+      writer: "Monica Geller",
+      description:
+        "Beta prototype sales iPad gen-z marketing network effects value proposition",
+    },
+  ];
   return (
     <div className="w-full">
       <section className="w-full h-[100vh] bg-[#0A2640] flex flex-col gap-5 justify-center px-4 md:px-[104px] 2xl:px-[180px]">
@@ -47,7 +79,7 @@ export default function Home() {
                 onClick={() => {
                   console.log("test");
                 }}
-                className="w-[187px] border border-white"
+                className="w-[187px] border border-white text-white"
               />
             </div>
           </div>
@@ -181,7 +213,7 @@ export default function Home() {
       </section>
 
       {/* =======CUSTOMER CONNECT ====== */}
-      <section className="w-full md:h-[100vh] bg-white flex flex-col gap-10 justify-center px-4 md:px-[104px] 2xl:px-[180px] py-[100px] md:py-[120px]">
+      <section className="w-full md:h-[100vh] flex flex-col gap-10 justify-center px-4 md:px-[104px] 2xl:px-[180px] py-[100px] md:py-[120px]">
         <Image src={LgTableTalk} alt="" className="w-full" />
         <div className="w-full flex flex-col md:flex-row gap-7">
           <p className="max-w-[493px] text-4xl text-[#000000] md:leading-[56px] manrope font-normal">
@@ -200,6 +232,35 @@ export default function Home() {
             />
           </div>
         </div>
+      </section>
+
+      {/* ========= VALUE PROPOSITION ============ */}
+      <section className="w-full md:h-[100vh] flex flex-col gap-5 justify-center px-4 md:px-[104px] 2xl:px-[180px] py-[100px] md:py-[120px]">
+        <SectionHeader
+          title="Our Blog"
+          description="Value proposition accelerator product management venture"
+        />
+
+        <div className="w-full grid grid-cols-1 md:grid-cols-3 items-center justify-between gap-7">
+          {blogLists.map((blog) => (
+            <div key={blog.id}>
+              <BlogCard
+                writer={blog.writer}
+                avatar={blog.avatar}
+                image={blog.image}
+                date={blog.date}
+                category={blog.category}
+                description={blog.description}
+              />
+            </div>
+          ))}
+        </div>
+
+        <Button
+          label="Load more"
+          onClick={() => {}}
+          className="w-[219px] h-[60px] mx-auto text-[#0A2640] border border-[#0A2640]"
+        />
       </section>
     </div>
   );
