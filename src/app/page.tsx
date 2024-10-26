@@ -22,6 +22,7 @@ import LgTableTalk from "../../public/large-table-talk.svg";
 import CollapsibleTab from "@/components/CollapsibleTab";
 import BlogCard from "@/components/BlogCard";
 import InputField from "@/components/InputField";
+import Footer from "@/components/Footer";
 export default function Home() {
   const blogLists = [
     {
@@ -302,6 +303,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ================== FOOTER AREA =========== */}
+      <Footer />
     </div>
   );
 }
