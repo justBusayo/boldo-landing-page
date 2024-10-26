@@ -6,14 +6,15 @@ interface FooterListProps {
 const FooterList: React.FC<FooterListProps> = ({ heading, list }) => {
   return (
     <div className="flex flex-col gap-6 md:gap-12">
-      <h4 className="flex gap-2 text-xl text-[#000000] font-bold">
-        {heading}
-      </h4>
+      <h4 className="flex gap-2 text-xl text-[#000000] font-bold">{heading}</h4>
       {list.map((ls) => (
         <div className="flex items-center gap-2 text-base text-[#777777] font-normal">
           <span>{ls.split("*")[0]}</span>
           {ls.includes("*") && (
-            <div className="py-1 px-3 rounded-[120px] bg-[#65E4A3] text-[#0A2640] text-sm font-bold">
+            <div
+              key={ls}
+              className="py-1 px-3 rounded-[120px] bg-[#65E4A3] text-[#0A2640] text-sm font-bold"
+            >
               {ls.split("*")[1]}
             </div>
           )}

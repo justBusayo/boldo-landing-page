@@ -4,7 +4,7 @@ import Image from "next/image";
 import FooterList from "./FooterList";
 const Footer = () => {
   return (
-    <section className="w-full md:h-[50vh] flex flex-col px-4 md:px-[104px] 2xl:px-[180px] py-[50px] md:py-[80px]">
+    <section className="w-full md:h-[60vh] flex flex-col px-4 md:px-[104px] 2xl:px-[180px] py-[50px] md:py-[80px]">
       <div className="flex flex-col md:flex-row md:justify-between gap-5 xl:pr-20">
         <div>
           <Image src={BoldoLogo} alt="boldo" className="mb-7" />

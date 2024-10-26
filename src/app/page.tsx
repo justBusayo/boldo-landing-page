@@ -23,6 +23,7 @@ import CollapsibleTab from "@/components/CollapsibleTab";
 import BlogCard from "@/components/BlogCard";
 import InputField from "@/components/InputField";
 import Footer from "@/components/Footer";
+import Headers from "@/components/Headers";
 export default function Home() {
   const blogLists = [
     {
@@ -57,7 +58,9 @@ export default function Home() {
   ];
   return (
     <div className="w-full">
-      <section className="relative w-full h-[100vh] bg-[#0A2640] flex flex-col gap-5 justify-center px-4 md:px-[104px] 2xl:px-[180px]">
+      {/* ========HEADER =========== */}
+      <Headers />
+      <section className="relative w-full md:h-[100vh] bg-[#0A2640] flex flex-col gap-5 justify-center px-4 md:px-[104px] 2xl:px-[180px] pb-12 md:pb-0 pt-28">
         <Image
           style={{
             mixBlendMode: "luminosity",
