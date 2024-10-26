@@ -7,7 +7,7 @@ const ImagesWithFloatCard2 = () => {
     <div className="relative md:w-[494px] md:h-[506px]">
       <Image src={LadyOnPhone} alt="man on phone" className="w-full" />
 
-      <div className="absolute -bottom-[30%] md:bottom-[-20%] left-[15%] py-12 flex flex-col items-center gap-5 w-[251px] h-[388px] bg-white shadow-sm rounded-md">
+      <div className="absolute -bottom-[30%] md:bottom-[-30%] left-[15%] py-12 flex flex-col items-center gap-5 w-[251px] h-[388px] bg-white shadow-sm rounded-md">
         <Image src={PieGraph} alt="" />
 
         <div className="w-full flex items-center gap-5 justify-start pl-8">

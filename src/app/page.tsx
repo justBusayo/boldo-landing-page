@@ -13,7 +13,12 @@ import ImagesWithFloatCard from "@/components/ImagesWithFloatCard";
 import { Eye, Magicpen, Sun1, TickCircle } from "iconsax-react";
 import ListBar from "@/components/ListBar";
 import ImagesWithFloatCard2 from "@/components/ImagesWithFloatCard/ImagesWithFloatCard2";
-
+import TestimonialCard from "@/components/TestimonialCard";
+import Dumbledore from "../../public/dumbledore.svg";
+import Snape from "../../public/snape.svg";
+import Potter from "../../public/potter.svg";
+import LgTableTalk from "../../public/large-table-talk.svg";
+import CollapsibleTab from "@/components/CollapsibleTab";
 export default function Home() {
   return (
     <div className="w-full">
@@ -148,10 +153,53 @@ export default function Home() {
       </section>
 
       {/* ====== ENTERPRISE ===== */}
-      <section className="w-full md:h-[100vh] bg-[#0A2640] flex flex-col gap-5 justify-center px-4 md:px-[104px] 2xl:px-[180px] py-[100px] md:py-[120px]">
-        <p className="max-w-[493px] text-4xl text-white md:leading-[56px] manrope font-normal">
+      <section className="w-full md:h-[100vh] bg-[#0A2640] flex flex-col gap-10 justify-center px-4 md:px-[104px] 2xl:px-[180px] py-[100px] md:py-[120px]">
+        <p className="max-w-[530px] text-4xl text-white md:leading-[56px] manrope font-normal">
           An enterprise template to ramp up your company website
         </p>
+
+        <div className="w-full flex flex-col gap-7 md:flex-row md:justify-between">
+          <TestimonialCard
+            avatar={Dumbledore}
+            name="Albus Dumbledore"
+            testimony="“Buyer buzz partner network disruptive non-disclosure agreement business”"
+            role="Manager @ Howarts"
+          />
+          <TestimonialCard
+            avatar={Snape}
+            name="Severus Snape"
+            testimony="“Learning curve infrastructure value proposition advisor strategy user experience hypotheses investor.”"
+            role="Manager @ Slytherin"
+          />
+          <TestimonialCard
+            avatar={Potter}
+            name="Harry Potter"
+            testimony="“Release facebook responsive web design business model canvas seed money monetization.”"
+            role="Team Leader @ Gryffindor"
+          />
+        </div>
+      </section>
+
+      {/* =======CUSTOMER CONNECT ====== */}
+      <section className="w-full md:h-[100vh] bg-white flex flex-col gap-10 justify-center px-4 md:px-[104px] 2xl:px-[180px] py-[100px] md:py-[120px]">
+        <Image src={LgTableTalk} alt="" className="w-full" />
+        <div className="w-full flex flex-col md:flex-row gap-7">
+          <p className="max-w-[493px] text-4xl text-[#000000] md:leading-[56px] manrope font-normal">
+            We connect our customers with the best, and help them keep up-and
+            stay open.
+          </p>
+
+          <div className="w-full flex flex-col gap-5">
+            <CollapsibleTab
+              title="We connect our customers with the best?"
+              details="We connect our customers with the best, and help them keep up-and stay open."
+            />
+            <CollapsibleTab
+              title="Android research & development rockstar? "
+              details="We connect our customers with the best, and help them keep up-and stay open."
+            />
+          </div>
+        </div>
       </section>
     </div>
   );
